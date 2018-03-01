@@ -77,15 +77,3 @@ char *get_next_line(int fd)
 	content[i] = '\0';
 	return (content);
 }
-
-int  main(void)
-{
-	int fd = open("test.txt", O_RDONLY);
-	char *s = get_next_line (fd);
-	while (s) {
-	printf("%s\n", s);
-	free(s);
-	s = get_next_line (fd);
-	}
-	return  (0);
-}
